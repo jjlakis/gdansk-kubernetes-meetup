@@ -33,3 +33,5 @@ resource "azurerm_kubernetes_cluster" "gkm" {
     identity_ids = [azurerm_user_assigned_identity.reader.id]
   }
 }
+
+
