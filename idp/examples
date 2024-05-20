@@ -1,0 +1,7 @@
+https://login.microsoftonline.com/common/.well-known/openid-configuration # MS multi-tenant v1
+https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration # MS multi-tenant v2
+https://login.microsoftonline.com/66209a4a-80f3-4602-8126-2193115722f8/.well-known/openid-configuration # MS single-tenant v1
+https://login.microsoftonline.com/66209a4a-80f3-4602-8126-2193115722f8/v2.0/.well-known/openid-configuration # MS single-tenant v2
+
+https://token.actions.githubusercontent.com/.well-known/openid-configuration # GH Actions
+
