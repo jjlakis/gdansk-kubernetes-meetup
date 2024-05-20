@@ -32,6 +32,10 @@ resource "azurerm_kubernetes_cluster" "gkm" {
     type = "UserAssigned"
     identity_ids = [azurerm_user_assigned_identity.reader.id]
   }
+
+  oidc_issuer_enabled = true
+  workload_identity_enabled = true
+
 }
 
 
