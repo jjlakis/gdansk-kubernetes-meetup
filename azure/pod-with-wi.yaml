@@ -10,7 +10,7 @@ kind: Pod
 metadata:
   name: azurecli-with-wi
   labels:
-    azure.workload.identity/use: "true" # So admission control captures it
+    azure.workload.identity/use: "true" # For admission webhook
 spec:
   serviceAccountName: wi
   containers:
