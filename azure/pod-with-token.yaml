@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: azurecli-with-token
+spec:
+  containers:
+  - args:
+    - sleep
+    - infinity
+    image: mcr.microsoft.com/azure-cli
+    name: azurecli
+    volumeMounts:
+    - name: token-vol
+      mountPath: "/service-account"
+      readOnly: true
+  serviceAccountName: default
+  volumes:
+  - name: token-vol
+    projected:
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3600
+          path: token
+
